@@ -102,9 +102,22 @@ def index():
 <style>
 html,body,#map{height:100%;margin:0;background:#101010;color:#0f0;font-family:'Courier New',monospace;}
 .leaflet-container { background:#101010; }
-.bus-label { font-size:14px; text-align:center; margin-top:5px; font-weight:bold; }
+.bus-label { font-size:12px; text-align:center; margin-top:5px; font-weight:bold; }
 .stop-label { font-size:12px;color:#00ffff;text-align:center;font-weight:bold;text-shadow:0 0 2px black; }
 #bus-info { position: fixed; bottom:0; left:0; width:100%; background: rgba(0,0,0,0.85); color:#0f0; font-size:14px; padding:6px 10px; z-index:9999; border-top:1px solid #0f0; }
+#toggle-map-mode {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    z-index: 9999;
+    background: rgba(0,0,0,0.7);
+    color: #0f0;
+    border: 1px solid #0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
 #toggle-stops { position: fixed; bottom: 20px; right: 20px; z-index: 9999; background: rgba(0,0,0,0.7); color:#0f0; border:1px solid #0f0; padding:5px 10px; border-radius:5px; cursor:pointer; font-weight:bold; }
 #city-menu { position: fixed; top: 30px; right: 20px; z-index: 9999; background: rgba(0,0,0,0.8); color:#0f0; border:1px solid #0f0; border-radius:5px; padding:10px; font-size:14px; }
 .city-btn { display:block; margin:4px 0; cursor:pointer; color:#0f0; text-align:center; }
@@ -136,6 +149,7 @@ html,body,#map{height:100%;margin:0;background:#101010;color:#0f0;font-family:'C
 <div id="marquee"><span>Loading delayed buses...</span></div>
 <div id="map"></div>
 <div id="bus-info">Click a bus or stop to see info...</div>
+<button id="toggle-map-mode">Satellite Mode</button>
 <button id="toggle-stops">Hide Stops</button>
 <div id="city-menu">
   <div class="city-btn" onclick="switchCity('zielonagora')">Zielona Góra</div>
@@ -160,6 +174,33 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png'
 let busMarkers={},stopMarkers=[],trackedBusId=null,stopsVisible=true,currentCity='zielonagora',userMarker=null;
 
 let marqueeSpan = document.querySelector("#marquee span");
+
+// Dark map (Carto)
+const darkTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', { maxZoom: 19 });
+
+// Satellite map (Esri)
+const satelliteTiles = L.tileLayer(
+    'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', 
+    { attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DigitalGlobe, GeoEye, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community', maxZoom: 19 }
+);
+
+let currentTile = 'dark';
+darkTiles.addTo(map);
+
+document.getElementById('toggle-map-mode').addEventListener('click', () => {
+    if(currentTile === 'dark'){
+        map.removeLayer(darkTiles);
+        satelliteTiles.addTo(map);
+        currentTile = 'satellite';
+        document.getElementById('toggle-map-mode').innerText = 'Dark Mode';
+    } else {
+        map.removeLayer(satelliteTiles);
+        darkTiles.addTo(map);
+        currentTile = 'dark';
+        document.getElementById('toggle-map-mode').innerText = 'Satellite Mode';
+    }
+});
+
 
 function updateMarquee(text){
     if(!marqueeSpan){
@@ -242,7 +283,7 @@ async function update(){
 
   if(stopMarkers.length===0){
     stops.forEach(s=>{
-      const m=L.marker([s.lat,s.lon],{icon:L.divIcon({className:'stop-label',html:`🚏<br>${s.stop_name}`,iconSize:[60,25],iconAnchor:[30,0]})});
+      const m=L.marker([s.lat,s.lon],{icon:L.divIcon({className:'stop-label',html:`🚩<br>${s.stop_name}`,iconSize:[60,25],iconAnchor:[30,0]})});
       m.addTo(map);
       m.on('click',()=>{trackedBusId=null;document.getElementById('bus-info').innerHTML=`Stop: ${s.stop_name}`;});
       stopMarkers.push(m);
