@@ -4,6 +4,9 @@ Second one is for hosting simple map website on localhost with all neccessary da
 
 both files will work as long as czynacza.pl don't change anything related to this data...
 
+To start files You need flask and requests.
+that's all
+
 I also provide this data world-wide on my website.
 
 Data updates as fast as possible (every 2 - 15 seconds)
