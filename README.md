@@ -10,12 +10,12 @@ Data updates as fast as possible (every 2 - 15 seconds)
 If You make request every 2 seconds nothing will change untill czynaczas.pl data will be updated.
 
 # Zielona Gora API
-bus data: https://api.patched.cc/busproject/zielonagora_bus_data.json
-stops: https://api.patched.cc/busproject/zielonagora_stop.json
+1. bus data: https://api.patched.cc/busproject/zielonagora_bus_data.json
+2. stops: https://api.patched.cc/busproject/zielonagora_stop.json
 
 # Other cities
-bus data: https://api.patched.cc/busproject/CITY_bus_data.json
-stops: https://api.patched.cc/busproject/CITY_stop.json
+1. bus data: https://api.patched.cc/busproject/CITY_bus_data.json
+2. stops: https://api.patched.cc/busproject/CITY_stop.json
 
 Just insert Your city in CITY and it should work.
 
