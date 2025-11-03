@@ -14,10 +14,10 @@ bus data: https://api.patched.cc/busproject/zielonagora_bus_data.json
 stops: https://api.patched.cc/busproject/zielonagora_stop.json
 
 # Other cities
-bus data: https://api.patched.cc/busproject/<CITY>_bus_data.json
-stops: https://api.patched.cc/busproject/<CITY>_stop.json
+bus data: https://api.patched.cc/busproject/CITY_bus_data.json
+stops: https://api.patched.cc/busproject/CITY_stop.json
 
-Just insert Your city in <CITY> and it should work.
+Just insert Your city in CITY and it should work.
 
 # Supported cities:
 1. Zielona Gora
