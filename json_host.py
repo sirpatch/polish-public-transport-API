@@ -89,7 +89,7 @@ def updater():
 
 
 # ---------- JSON endpoints ----------
-@app.route("/<city>_bus_data.json")
+@app.route("/busproject/<city>_bus_data.json")
 def get_city_buses(city):
     if city not in [c["name"] for c in cities]:
         return jsonify({"error": "unknown city"}), 404
@@ -97,7 +97,7 @@ def get_city_buses(city):
         return jsonify({city: latest_buses.get(city, {})})
 
 
-@app.route("/<city>_stop.json")
+@app.route("/busproject/<city>_stop.json")
 def get_city_stops(city):
     if city not in [c["name"] for c in cities]:
         return jsonify({"error": "unknown city"}), 404
