@@ -21,12 +21,12 @@ Host is stable and data is available.
 2. stops: https://api.patched.cc/busproject/zielonagora_stop.json
 
 # Other cities - PUBLIC API
-1. bus data: https://api.patched.cc/busproject/zielonagora_bus_data.json
-2. stops: https://api.patched.cc/busproject/zielonagora_stop.json
+1. bus data: https://api.patched.cc/busproject/CITY_bus_data.json
+2. stops: https://api.patched.cc/busproject/CITY_stop.json
 
 # Zielona Gora API - SELF HOST
-1. bus data: http://127.0.0.1:5000/busproject/CITY_bus_data.json
-2. stops: http://127.0.0.1:5000/busproject/city_stop.json
+1. bus data: http://127.0.0.1:5000/busproject/zielonagora_bus_data.json
+2. stops: http://127.0.0.1:5000/busproject/zielonagora_stop.json
 
 # Other cities
 1. bus data: http://127.0.0.1:5000/busproject/CITY_bus_data.json
@@ -35,19 +35,19 @@ Host is stable and data is available.
 Just insert Your city in CITY and it should work.
 
 # Supported cities:
-1. Zielona Gora
-2. Wroclaw
-3. Warsaw
-4. Poznan
-5. Kielce
-6. Krakow
-7. Leszno
-8. Lodz
-9. Katowice GZM
-10. Rzeszow
-11. Slupsk
-12. Swinoujscie
-13. Szczecin
-14. Trojmiasto
+1. Zielona Gora -> zielonagora
+2. Wroclaw -> wroclaw
+3. Warsaw -> warsaw
+4. Poznan -> poznan
+5. Kielce -> kielce
+6. Krakow -> krakow
+7. Leszno -> leszno
+8. Lodz -> lodz
+9. Katowice GZM -> gzm
+10. Rzeszow -> rzeszow
+11. Slupsk -> slupsk
+12. Swinoujscie -> swinoujscie
+13. Szczecin -> szczecin
+14. Trojmiasto -> trojmiasto
 
 Have fun and Thanks :)
