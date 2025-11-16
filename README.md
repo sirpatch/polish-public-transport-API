@@ -21,12 +21,12 @@ Host is stable and data is available.
 2. stops: https://api.patched.cc/busproject/zielonagora_stop.json
 
 # Other cities - PUBLIC API
-1. bus data: http://127.0.0.1:5000/busproject/CITY_bus_data.json
-2. stops: http://127.0.0.1:5000/busproject/CITY_stop.json
-
-# Zielona Gora API - SELF HOST
 1. bus data: https://api.patched.cc/busproject/zielonagora_bus_data.json
 2. stops: https://api.patched.cc/busproject/zielonagora_stop.json
+
+# Zielona Gora API - SELF HOST
+1. bus data: http://127.0.0.1:5000/busproject/CITY_bus_data.json
+2. stops: http://127.0.0.1:5000/busproject/city_stop.json
 
 # Other cities
 1. bus data: http://127.0.0.1:5000/busproject/CITY_bus_data.json
