@@ -2,7 +2,9 @@
 
                     WHOLE API IS DOWN
 
-                   czynaczas.pl  BORKE
+                czynaczas.pl BANNED MY IP
+
+                    WORKING ON FIXES...
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 There are 2 files.
