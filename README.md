@@ -1,3 +1,10 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+                    WHOLE API IS DOWN
+
+                   czynaczas.pl  BORKE
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 There are 2 files.
 One is for hosting bus data (json_host.py)
 Second one is for hosting simple map website on localhost with all neccessary data to show bus and stops locations. (bus_map.py)
