@@ -1,10 +1,11 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-                    WHOLE API IS DOWN
+          API on https://api.patched.cc/busproject/ IS DOWN
 
-                czynaczas.pl BANNED MY IP
+                       WORKING ON FIXES...
 
-                    WORKING ON FIXES...
+                    DO NOT USE "json_host.py"
+                      IT MAY CAUSE IP BAN
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 There are 2 files.
